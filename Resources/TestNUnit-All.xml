@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<suite name="All" verbose="1">
+  <test name="OpenCalculatorPageTest"></test>
+  <test name="GoogleCloudPricingCalculatorTest"></test>
+</suite>

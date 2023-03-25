@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<suite name="Smoke" verbose="2">
+  <test name="OpenCalculatorPageTest"></test>
+</suite>
