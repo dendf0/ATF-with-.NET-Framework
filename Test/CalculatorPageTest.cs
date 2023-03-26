@@ -28,20 +28,20 @@ namespace Framework.Test
             string email;
             string costInCalculator;
             string costInLetter;
-            MainPage mainPage = new MainPage(steps.driver);
-            mainPage.OpenPage();
-            ResultsPage resultsPage = mainPage.SearchForCalculator();
-            CalculatorPage pricingCalculatorPage = resultsPage.OpenPricingCalculatorPage();
-            EstimatePage estimatePage = pricingCalculatorPage.ComputeEngine(testData.engine);
 
+            EstimatePage estimatePage = new MainPage(steps.driver)
+                .OpenPage()
+                .SearchForCalculator()
+                .OpenPricingCalculatorPage()
+                .ComputeEngine(testData.engine);
             costInCalculator = estimatePage.GetTotalEstimatedMonthlyCost();
-
             estimatePage.OpenEmailEstimateForm();
             GeneratorPage generatorPage = GenerateEmail();
             email = generatorPage.GetEmail();
             InboxPage inboxPage = generatorPage.OpenInbox();
             steps.driver.SwitchTo().Window(estimatePage.GetWindowHandle());
-            estimatePage.InputEmail(email).SendEmail();
+            estimatePage.InputEmail(email)
+                .SendEmail();
             steps.driver.SwitchTo().Window(generatorPage.GetWindowHandle());
 
             Assert.IsTrue(inboxPage.IsEmailReceived());

@@ -17,10 +17,10 @@ namespace Framework.Test
         [Category("Regression")]
         public void OpenCalculatorPageTest()
         {
-            MainPage mainPage = new MainPage(steps.driver);
-            mainPage.OpenPage();
-            ResultsPage resultsPage = mainPage.SearchForCalculator();
-            CalculatorPage pricingCalculatorPage = resultsPage.OpenPricingCalculatorPage();
+            CalculatorPage calculatorPage = new MainPage(steps.driver)
+                .OpenPage()
+                .SearchForCalculator()
+                .OpenPricingCalculatorPage();
 
             Assert.IsTrue(steps.driver.Title.Equals("Google Cloud Pricing Calculator"));
         }

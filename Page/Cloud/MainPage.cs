@@ -12,13 +12,13 @@ namespace Framework.Page.Cloud
     {
         private string link = "https://cloud.google.com/";
         private string toSearch = "Google Cloud Platform Pricing Calculator";
+
         [FindsBy(How = How.Name, Using = "q")]
         private IWebElement searchField;
 
-
         public MainPage(IWebDriver driver) : base(driver)
         {
-            
+
         }
 
         public MainPage OpenPage()

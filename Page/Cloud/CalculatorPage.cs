@@ -24,11 +24,9 @@ namespace Framework.Page.Cloud
 
         [FindsBy(How = How.XPath, Using = "//article[@id='cloud-site']//iframe")]
         private IWebElement outerFrame;
-        //private IWebElement outerFrame => base.WaitAndFindElement(outerFrameLocator);
 
         [FindsBy(How = How.Id, Using = "myFrame")]
         private IWebElement innerFrame;
-        //private IWebElement innerFrame => base.WaitAndFindElement(innerFrameLocator);
 
         [FindsBy(How = How.XPath, Using = "//div[@title='Compute Engine']")]
         private IWebElement computeEngineItem;
@@ -72,12 +70,9 @@ namespace Framework.Page.Cloud
         [FindsBy(How = How.XPath, Using = "//button[@ng-click='listingCtrl.addComputeServer(ComputeEngineForm);']")]
         private IWebElement addToEstimateButton;
 
-
-        //private By selectOptionsFormLocator = By.XPath("//div[contains(@class, 'md-select-menu-container') and contains(@class,'md-active')]/md-select-menu/md-content/md-option/div[contains(@class,'md-text')]");
         [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'md-select-menu-container') and contains(@class,'md-active')]/md-select-menu/md-content/md-option/div[contains(@class,'md-text')]")]
         private IList<IWebElement> selectOptionsForm;
 
-        //private By selectOptionsGroupFormLocator = By.XPath("//div[contains(@class, 'md-select-menu-container') and contains(@class,'md-active')]/md-select-menu/md-content/md-optgroup/md-option/div[contains(@class,'md-text')]");
         [FindsBy(How = How.XPath, Using = "//div[contains(@class, 'md-select-menu-container') and contains(@class,'md-active')]/md-select-menu/md-content/md-optgroup/md-option/div[contains(@class,'md-text')]")]
         private IList<IWebElement> selectOptionsGroupForm;
 
