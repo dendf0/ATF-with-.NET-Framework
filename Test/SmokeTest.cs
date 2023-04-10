@@ -23,8 +23,6 @@ namespace Framework.Test
                 .OpenPricingCalculatorPage();
 
             Assert.IsTrue(steps.driver.Title.Equals("Google Cloud Pricing Calculator"));
-            
-            Assert.Fail();
         }
     }
 }
